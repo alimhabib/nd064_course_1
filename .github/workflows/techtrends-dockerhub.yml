@@ -15,7 +15,7 @@ jobs:
         run: sudo apt-get install tree
       -
         name: move to the project directory  
-        run: cd .\project\techtrends\
+        run: cd ./project/techtrends
       -
         name: ls the files 
         run: tree
