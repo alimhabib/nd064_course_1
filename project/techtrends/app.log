@@ -1,0 +1,9 @@
+INFO:app:6
+INFO:app:1
+INFO:app:Metrics request successfull
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2022 12:51:25] "GET /metrics HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.20.10.7:3111/ (Press CTRL+C to quit)
+INFO:app:Metrics request successfull
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2022 12:52:10] "GET /metrics HTTP/1.1" 200 -
