@@ -9,12 +9,12 @@ spec:
   replicas: {{ .Values.replicaCount}} 
   selector:
     matchLabels:
-      app: {{ .Values.image.repository}} 
+      app: {{ .Values.applicationName}}
   strategy: {}
   template:
     metadata:
       labels:
-        app: {{ .Values.image.repository}} 
+        app: {{ .Values.applicationName}}
     spec:
       containers:
       - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
