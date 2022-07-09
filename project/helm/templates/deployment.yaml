@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: {{ .Values.image.repository}} 
-  name: {{ .Values.image.repository}} 
+  name: {{ .Values.applicationName}} 
   namespace: {{ .Values.namespace.name }} 
 spec:
   replicas: {{ .Values.replicaCount}} 
@@ -19,7 +19,7 @@ spec:
       containers:
       - image: {{ .Values.image.repository}}:{{ .Values.image.tag}} 
         imagePullPolicy: {{ .Values.image.pullPolicy}} 
-        name: {{ .Values.image.repository}}
+        name: {{ .Values.applicationName}} 
         ports:
         - containerPort: {{ .Values.service.targetPort}} 
           protocol: {{ .Values.service.protocol}} 
