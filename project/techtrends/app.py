@@ -1,6 +1,7 @@
 from http.client import OK
 import logging 
-import sqlite3 
+import sqlite3
+import sys 
 
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
@@ -108,5 +109,8 @@ if __name__ == "__main__":
    logging.basicConfig(
     format='%(levelname)-8s : %(asctime)s  %(message)s',
     level=logging.DEBUG,
-    datefmt='%Y-%m-%d %H:%M:%S')
+    datefmt='%Y-%m-%d %H:%M:%S', handlers=[ 
+        logging.StreamHandler(sys.stdout),
+        logging.StreamHandler(sys.stderr)
+    ]) 
    app.run(host='0.0.0.0', port='3111')
